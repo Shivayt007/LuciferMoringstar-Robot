@@ -25,7 +25,7 @@ FORCE = environ.get('FORCES_SUB')
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", LuciferMoringstar.FILE_CAPTIONS)
 DEV_NAME = environ.get("DEV_NAME", "Muhammed")
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '957158815').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS'].split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001594798134').split()]
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 DATABASE_URI = "mongodb+srv://trvpn:trvpn@cluster0.ve0u8.mongodb.net/?retryWrites=true&w=majority"
